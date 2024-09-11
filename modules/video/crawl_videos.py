@@ -42,10 +42,6 @@ def crawl_videos(driver, setter, data, file_path):
 
             if video_title not in setter:
                 setter.add(video_title)
-                print(f"새 동영상 제목: {video_title}")
-                print(f"조회수: {views}")
-                print(f"업로드 날짜: {upload_date}")
-                print(f"채널 이름: {channel_name}")
                 
                 new_data = {
                     'title': video_title,
