@@ -1,13 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
+import modules
+import modules.options
+import modules.options.get_options
 
-options = Options()
 
 def get_driver(headless=False):
-    options = Options()
+    options = modules.options.get_options.sele_options_getter()
     if headless:
         options.headless = True  # headless 모드를 사용할 경우
 
